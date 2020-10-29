@@ -256,12 +256,64 @@ hr {
 
 #microscopy {
   background-color: #A5D0C5;
+  padding-bottom: 3rem;
 }
  
 #microscopy h2 {
    color: #094B4F;
   }
  
+
+  #microscopyvideos {
+    background-color: #A5D0C5;
+    padding-bottom: 3rem;
+  }
+   
+  #microscopyvideos h2 {
+     color: #094B4F;
+    }
+   
+
+#project {
+ box-shadow:4px 4px 4px black; 
+ background-color: white;
+ border: solid;
+ margin-bottom: 3rem;
+ }
+
+#arduino {
+      background-color: #5AAA95;
+    }
+     
+#arduino h2 {
+       color: #094B4F;
+      }
+
+      
+#arduino h3 {
+  font-family: 'Open Sans', sans-serif;
+  color:  black;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+#arduino h4 {
+  font-family: 'Open Sans', sans-serif;
+  color:  black;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.img_arduino{
+  width: 50%;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+
+}
+
 
 .rows {
     display: flex;
@@ -300,12 +352,8 @@ hr {
       max-width: 100%;
     }
   }
-  
-.video {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
+
+
 
   .img_wrap {
     position: relative;
@@ -349,6 +397,20 @@ hr {
   } 
 
 
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:10%;
+    top:0;
+    width:80%;
+    height: 100%;
+    position:absolute;
+}
 
-
-
+.video{
+  padding-bottom: 3rem;
+}
