@@ -12,23 +12,66 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="main.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function firstFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function secondFunction() {
+      document.getElementById("secondDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
 
   <section class="topnav">
-    <div class="row">
-      <nav class="col-sm-12 text-right">
-        <a href="#header" accesskey="1" title="">Home</a>
-        <a href="#research-experience" accesskey="2" title="">Research Experience</a>
-        <a href="#education" accesskey="3" title="">Education</a>
-        <a href="#microscopy" accesskey="4" title="">Microscopy Pictures</a>
-        <a href="#microscopyvideos" accesskey="5" title="">Microscopy Videos</a> 
-        <a href="#arduino" accesskey="6" title="">Arduino Projects</a>
+    <div class="row" style="display: flex; align-items: center; justify-content: center;">
+    
+        <a href="#header" title="">Home</a>
 
-      </nav>
+        <div class="dropdown">
+          <button onclick="firstFunction()" class="dropbtn">CV
+            <i class="fa fa-caret-down"></i></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#research-experience">Research Experience</a>
+            <a href="#education">Education</a>  
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button onclick="secondFunction()" class="dropbtn">Personal Projects
+            <i class="fa fa-caret-down"></i></button>
+          <div id="secondDropdown" class="dropdown-content">
+            <a href="#childrens-books">Children's Books</a>
+            <a href="#microscopy">Microscopy Pictures</a>
+            <a href="#microscopyvideos">Microscopy Video</a>
+            <a href="#arduino">Arduino</a>
+          </div>
+        </div>
+
+
     </div>
   </section>
+
+
 
   <div class="empty"></div>
 
@@ -109,6 +152,7 @@
 </section>
 
 <section id="education" class="subsection">
+  
   <div class="container text-center">
     <h2>Education</h2>
     <hr>  
@@ -146,11 +190,41 @@
   
 </section>
 
+<section id="childrens-books" class="subsection">
+  <div class="container text-center">
+    <h2>Children's Books Videos</h2>
+    <hr>
+
+    <p>During the COVID-19 pandemic, I collaborated on this project with retired pre-school teacher Mirella Vallortigara to provide enterteinment for children and adults alike.</p>
+
+    <div class="video">
+      <div class="video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fQ2Zs8e_m6g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div> 
+
+    <div class="video">
+      <div class="video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zYEDf8QvEH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+    </div>
+
+    <div class="video">
+      <div class="video-responsive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5E_6zp67Blc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
 <section id="microscopy" class="subsection">
   <div class="container text-center">
     <h2>Microscopy Pictures</h2>
     <hr>
+    <p>As a hobby, I enjoy exploring the beauty and wonders of the microscopic world through the lenses of a compound microscope.</p>
+    
     <div class="rows">
       <div class="column">
         
@@ -284,13 +358,13 @@
   
   <div class="video">
     <div class="video-responsive">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/42ABkmPOasA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zYEDf8QvEH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div> 
   </div>
 
   <div class="video">
     <div class="video-responsive">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NyB_o4M4WQg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5E_6zp67Blc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -301,6 +375,7 @@
   <div class="container text-center">
     <h2>Arduino Projects</h2>
     <hr>
+
     <div id="project">
     <h3>Humidity and temperature display with DHT11 sensor</h3>
     <a target="_blank" href="Images/dht11_1.JPG">

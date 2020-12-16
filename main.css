@@ -61,9 +61,46 @@
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color:#eec824;
-  color: white;
+  color:  #6a961f;
 }
 
+.dropbtn {
+  background-color:white;
+  color: #6a961f;
+  padding:1.5rem 2rem; 
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1.5rem 2rem; 
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 
 hr {
   background-color: #061934;
@@ -254,6 +291,35 @@ hr {
 }
 
 
+
+
+#childrens-books {
+  background-color: #FFD800;
+}
+ 
+#childrens-books h2 {
+   color: #094B4F;
+  }
+
+  
+#childrens-books h3 {
+font-family: 'Open Sans', sans-serif;
+color:  black;
+font-weight: bold;
+font-size: 3rem;
+padding-bottom: 2rem;
+padding-top: 3rem;
+}
+
+#childrens-books h4 {
+font-family: 'Open Sans', sans-serif;
+color:  black;
+padding-bottom: 2rem;
+padding-top: 2rem;
+font-size: 2rem;
+}
+
+
 #microscopy {
   background-color: #A5D0C5;
   padding-bottom: 3rem;
@@ -306,6 +372,9 @@ hr {
   padding-top: 2rem;
   font-size: 2rem;
 }
+
+
+
 
 .img_arduino{
   width: 50%;
